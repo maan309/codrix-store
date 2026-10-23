@@ -76,6 +76,9 @@ const DOM = {
 
 // ─── Init ─────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
+  // امسح أي بيانات قديمة محفوظة في المتصفح
+  localStorage.removeItem('codrix_apps');
+
   State.apps = [...MY_APPS];
   buildCategories();
   filterAndRender();
