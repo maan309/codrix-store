@@ -7,15 +7,6 @@
 
 // ═══════════════════════════════════════════════════════
 //  ★ قائمة تطبيقاتك الحقيقية — عدّلها هنا مباشرة ★
-//
-//  fileUrl: ضع رابط ملف APK الحقيقي هنا، مثلاً:
-//    - ملف محلي في مجلد uploads:  "uploads/myapp.apk"
-//    - رابط GitHub مباشر:
-//        "https://github.com/user/repo/releases/download/v1.0/app.apk"
-//    - أي رابط تحميل مباشر آخر
-//
-//  icon: مسار صورة الأيقونة مثلاً "assets/icons/myapp.png"
-//        أو null لاستخدام الـ Emoji بدلاً منها
 // ═══════════════════════════════════════════════════════
 const MY_APPS = [
   {
@@ -33,31 +24,7 @@ const MY_APPS = [
     date: Date.now(),
     fileName: 'app-debug.apk',
     fileUrl: 'uploads/app-debug.apk',
-  },
-];
-  // ──────────────────────────────────────────────
-  // مثال: أضف تطبيقاتك هنا بنفس الهيكل أدناه
-  // ──────────────────────────────────────────────
-
-  /*
-  {
-    id: 'app-1',
-    name: 'اسم تطبيقك',
-    version: '1.0.0',
-    size: '25 MB',
-    category: 'أدوات',           // أدوات | تواصل | تعليم | صحة | ترفيه | ألعاب | أعمال
-    desc: 'وصف مختصر وجذاب للتطبيق يشرح ما يفعله وما يميزه.',
-    icon: 'assets/icons/app1.png', // أو null
-    iconEmoji: '📱',               // يظهر إذا لم توجد صورة
-    iconBg: 'linear-gradient(135deg, #1e3a8a, #3b82f6)',
-    downloads: 0,
-    rating: 5.0,
-    date: Date.now(),
-    fileName: 'myapp-v1.0.0.apk',
-    fileUrl: 'uploads/myapp-v1.0.0.apk',
-  },
-  */
-
+  }
 ];
 
 // ═══════════════════════════════════════════════════════
@@ -76,23 +43,22 @@ const State = {
 
 // ─── DOM References ───────────────────────────────────
 const DOM = {
-  appsGrid:       () => document.getElementById('appsGrid'),
-  searchInput:    () => document.getElementById('searchInput'),
-  filtersRow:     () => document.getElementById('filtersRow'),
+  appsGrid:        () => document.getElementById('appsGrid'),
+  searchInput:     () => document.getElementById('searchInput'),
+  filtersRow:      () => document.getElementById('filtersRow'),
   appDetailOverlay:() => document.getElementById('appDetailOverlay'),
-  appsCountEl:    () => document.getElementById('appsCount'),
-  sortSelect:     () => document.getElementById('sortSelect'),
-  navbar:         () => document.getElementById('mainNavbar'),
-  navToggle:      () => document.getElementById('navToggle'),
-  navLinks:       () => document.getElementById('navLinks'),
-  scrollTopBtn:   () => document.getElementById('scrollTopBtn'),
-  heroAppsCount:  () => document.getElementById('heroAppsCount'),
+  appsCountEl:     () => document.getElementById('appsCount'),
+  sortSelect:      () => document.getElementById('sortSelect'),
+  navbar:          () => document.getElementById('mainNavbar'),
+  navToggle:       () => document.getElementById('navToggle'),
+  navLinks:        () => document.getElementById('navLinks'),
+  scrollTopBtn:    () => document.getElementById('scrollTopBtn'),
+  heroAppsCount:   () => document.getElementById('heroAppsCount'),
   toastContainer: () => document.getElementById('toastContainer'),
 };
 
 // ─── Init ─────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  // امسح أي بيانات قديمة محفوظة في المتصفح
   localStorage.removeItem('codrix_apps');
 
   State.apps = [...MY_APPS];
@@ -107,7 +73,6 @@ function buildCategories() {
   const row = DOM.filtersRow();
   if (!row) return;
 
-  // Collect unique categories from MY_APPS
   const cats = [ALL_CATEGORIES_LABEL, ...new Set(MY_APPS.map(a => a.category))];
 
   row.innerHTML = '';
@@ -130,7 +95,7 @@ function getCatIcon(cat) {
   const icons = {
     'الكل': '📱', 'أدوات': '🔧', 'تواصل': '💬',
     'تعليم': '🎓', 'صحة': '💪', 'ترفيه': '🎵',
-    'ألعاب': '🎮', 'أعمال': '💼',
+    'ألعاب': '🎮', 'أعمال': '💼', 'المال والأعمال': '💰',
   };
   return icons[cat] || '📦';
 }
@@ -170,34 +135,26 @@ function renderApps(apps) {
   const grid = DOM.appsGrid();
   if (!grid) return;
 
-  // No apps added yet by the owner
   if (State.apps.length === 0) {
     grid.innerHTML = `
       <div class="empty-state">
         <div class="empty-icon">📦</div>
         <div class="empty-title">لا توجد تطبيقات بعد</div>
-        <div class="empty-desc">
-          أضف تطبيقاتك عن طريق تعديل مصفوفة <code>MY_APPS</code>
-          في ملف <code>js/app.js</code> وضع رابط ملف APK الحقيقي.
-        </div>
       </div>`;
     return;
   }
 
-  // No results from search/filter
   if (apps.length === 0) {
     grid.innerHTML = `
       <div class="empty-state">
         <div class="empty-icon">🔍</div>
         <div class="empty-title">لا توجد تطبيقات مطابقة</div>
-        <div class="empty-desc">حاول تغيير كلمة البحث أو اختيار تصنيف آخر</div>
       </div>`;
     return;
   }
 
   grid.innerHTML = apps.map(app => createAppCard(app)).join('');
 
-  // Bind download buttons
   grid.querySelectorAll('.btn-download').forEach(btn => {
     btn.addEventListener('click', e => {
       e.stopPropagation();
@@ -205,7 +162,6 @@ function renderApps(apps) {
     });
   });
 
-  // Bind card click → detail view
   grid.querySelectorAll('.app-card').forEach(card => {
     card.addEventListener('click', () => openAppDetail(card.dataset.id));
   });
@@ -242,8 +198,7 @@ function createAppCard(app) {
           <span class="rating-count">(${app.rating})</span>
         </div>
         <button class="btn-download ${!hasFile ? 'btn-download--unavailable' : ''}"
-                data-id="${app.id}"
-                ${!hasFile ? 'title="رابط التحميل غير متوفر"' : ''}>
+                data-id="${app.id}">
           <i class="fas ${hasFile ? 'fa-download' : 'fa-clock'}"></i>
           ${hasFile ? 'تحميل APK' : 'قريباً'}
         </button>
@@ -264,7 +219,6 @@ function handleDownload(appId) {
   const app = State.apps.find(a => a.id === appId);
   if (!app) return;
 
-  // No real URL → do nothing
   if (!app.fileUrl || app.fileUrl === '#') {
     showToast('رابط التحميل غير متوفر حالياً', 'error');
     return;
@@ -276,7 +230,6 @@ function handleDownload(appId) {
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري التحميل...';
   }
 
-  // Trigger real download immediately
   const a = document.createElement('a');
   a.href     = app.fileUrl;
   a.download = app.fileName || app.name.replace(/\s+/g, '-') + '.apk';
@@ -284,9 +237,7 @@ function handleDownload(appId) {
   a.click();
   document.body.removeChild(a);
 
-  // Increment counter (in-memory only — no localStorage)
   app.downloads = (app.downloads || 0) + 1;
-
   showToast(`بدأ تحميل "${app.name}" — ${app.size} ✅`, 'success');
 
   setTimeout(() => {
@@ -364,7 +315,6 @@ function closeAppDetail() {
 
 // ─── Event Bindings ───────────────────────────────────
 function bindEvents() {
-  // Search
   const searchInput = DOM.searchInput();
   if (searchInput) {
     searchInput.addEventListener('input', debounce(e => {
@@ -373,7 +323,6 @@ function bindEvents() {
     }, 300));
   }
 
-  // Sort
   const sortSelect = DOM.sortSelect();
   if (sortSelect) {
     sortSelect.addEventListener('change', () => {
@@ -382,7 +331,6 @@ function bindEvents() {
     });
   }
 
-  // Navbar scroll
   window.addEventListener('scroll', () => {
     const navbar   = DOM.navbar();
     const scrollTop = DOM.scrollTopBtn();
@@ -390,7 +338,6 @@ function bindEvents() {
     if (scrollTop) scrollTop.classList.toggle('show', window.scrollY > 400);
   });
 
-  // Mobile nav toggle
   const toggle   = DOM.navToggle();
   const navLinks = DOM.navLinks();
   if (toggle && navLinks) {
@@ -402,12 +349,10 @@ function bindEvents() {
     });
   }
 
-  // Close detail overlay on backdrop click
   DOM.appDetailOverlay()?.addEventListener('click', e => {
     if (e.target === DOM.appDetailOverlay()) closeAppDetail();
   });
 
-  // ESC key
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeAppDetail();
   });
