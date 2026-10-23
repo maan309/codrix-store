@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CODRIX Store — متجر تطبيقات APK عربي متكامل مع تحميل مباشر وآمن" />
+  <meta name="description" content="CODRIX Store — متجر تطبيقات APK عربي مع تحميل مباشر وآمن" />
   <title>CODRIX Store — متجر التطبيقات</title>
 
-  <!-- Google Fonts: Arabic -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <!-- Main Styles -->
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Favicon (inline SVG) -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
 </head>
 <body>
@@ -31,7 +30,6 @@
     <!-- Logo -->
     <a href="#" class="nav-logo">
       <div class="logo-icon">
-        <!-- CODRIX SVG Logo (styled after the C+code mark design) -->
         <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -43,13 +41,10 @@
               <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
             </filter>
           </defs>
-          <!-- Outer C shape -->
-          <path d="M 75 18 L 40 18 Q 15 18 15 50 Q 15 82 40 82 L 75 82 L 75 68 L 44 68 Q 30 68 30 50 Q 30 32 44 32 L 75 32 Z"
+          <path d="M75 18L40 18Q15 18 15 50Q15 82 40 82L75 82L75 68L44 68Q30 68 30 50Q30 32 44 32L75 32Z"
                 fill="url(#logoGrad)" filter="url(#glow)" opacity="0.9"/>
-          <!-- Inner C cutout effect -->
-          <path d="M 70 30 L 46 30 Q 26 30 26 50 Q 26 70 46 70 L 70 70 L 70 60 L 48 60 Q 36 60 36 50 Q 36 40 48 40 L 70 40 Z"
+          <path d="M70 30L46 30Q26 30 26 50Q26 70 46 70L70 70L70 60L48 60Q36 60 36 50Q36 40 48 40L70 40Z"
                 fill="#0a0c10" opacity="0.6"/>
-          <!-- Code slash mark -->
           <text x="38" y="57" font-family="monospace" font-size="18" fill="url(#logoGrad)" filter="url(#glow)">&lt;/&gt;</text>
         </svg>
       </div>
@@ -59,22 +54,22 @@
       </div>
     </a>
 
-    <!-- Navigation Links -->
+    <!-- Nav Links (no upload button) -->
     <ul class="nav-links" id="navLinks">
-      <li><a class="nav-link active" href="#" onclick="scrollToSection('hero')">
-        <i class="fas fa-home"></i> الرئيسية
-      </a></li>
-      <li><a class="nav-link" href="#" onclick="scrollToSection('appsSection')">
-        <i class="fas fa-th-large"></i> التطبيقات
-      </a></li>
-      <li><a class="nav-link" href="#" onclick="scrollToSection('featuresSection')">
-        <i class="fas fa-star"></i> المميزات
-      </a></li>
       <li>
-        <button class="btn-upload-nav" onclick="openUploadModal()">
-          <i class="fas fa-cloud-upload-alt"></i>
-          رفع تطبيق
-        </button>
+        <a class="nav-link active" href="#" onclick="scrollToSection('hero')">
+          <i class="fas fa-home"></i> الرئيسية
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" href="#" onclick="scrollToSection('appsSection')">
+          <i class="fas fa-th-large"></i> التطبيقات
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" href="#" onclick="scrollToSection('featuresSection')">
+          <i class="fas fa-star"></i> المميزات
+        </a>
       </li>
     </ul>
 
@@ -86,13 +81,12 @@
 </nav>
 
 <!-- ═══════════════════════════════════════════════════
-     HERO SECTION
+     HERO
 ═══════════════════════════════════════════════════ -->
 <section class="hero" id="hero">
   <div class="container">
     <div class="hero-content">
 
-      <!-- Text Side -->
       <div class="hero-text">
         <div class="hero-badge">
           <span class="dot"></span>
@@ -104,22 +98,23 @@
           الأندرويد
         </h1>
         <p class="hero-desc">
-          منصة CODRIX Store توفر لك أحدث وأقوى تطبيقات APK بشكل مجاني وآمن. استعرض المئات من التطبيقات المتنوعة وحمّلها مباشرة بضغطة زر واحدة.
+          منصة CODRIX Store توفر لك أحدث وأقوى تطبيقات APK بشكل مجاني وآمن تماماً.
+          استعرض التطبيقات وحمّلها مباشرة بضغطة زر واحدة بدون أي تعقيد.
         </p>
         <div class="hero-cta">
           <button class="btn-primary" onclick="scrollToSection('appsSection')">
             <i class="fas fa-rocket"></i>
             استعرض التطبيقات
           </button>
-          <button class="btn-secondary" onclick="openUploadModal()">
-            <i class="fas fa-upload"></i>
-            ارفع تطبيقك
+          <button class="btn-secondary" onclick="scrollToSection('featuresSection')">
+            <i class="fas fa-info-circle"></i>
+            تعرف على المميزات
           </button>
         </div>
 
         <div class="hero-stats">
           <div class="stat-item">
-            <span class="stat-number" id="heroAppsCount">6</span>
+            <span class="stat-number" id="heroAppsCount">0</span>
             <div class="stat-label">تطبيق متاح</div>
           </div>
           <div class="stat-item">
@@ -137,7 +132,7 @@
         </div>
       </div>
 
-      <!-- Visual Side (Phone Mockup) -->
+      <!-- Phone mockup -->
       <div class="hero-visual">
         <div class="phone-mockup">
           <div class="phone-frame">
@@ -194,16 +189,17 @@
       <i class="fas fa-search search-icon"></i>
     </div>
     <div class="filters-row" id="filtersRow">
-      <!-- Rendered by JS -->
+      <!-- Built dynamically from MY_APPS categories -->
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════
-     APPS SECTION
+     APPS GRID
 ═══════════════════════════════════════════════════ -->
 <section class="apps-section" id="appsSection">
   <div class="container">
+
     <div class="apps-count-bar">
       <p class="apps-count-text" id="appsCount">جاري التحميل...</p>
       <select class="sort-select" id="sortSelect">
@@ -215,15 +211,83 @@
       </select>
     </div>
 
-    <!-- Apps Grid -->
     <div class="apps-grid" id="appsGrid">
-      <!-- Rendered by JS -->
+      <!-- Rendered by JS from MY_APPS -->
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     HOW TO ADD APPS — Developer note (hidden in production)
+═══════════════════════════════════════════════════ -->
+<section class="how-to-section" id="howToSection" style="padding:60px 0;background:linear-gradient(180deg,transparent,rgba(30,144,255,0.04),transparent)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">للمطور</span>
+      <h2 class="section-title">كيف تضيف <span>تطبيقاتك</span>؟</h2>
+      <p class="section-desc">إضافة تطبيق جديد أمر بسيط جداً — فقط عدّل ملف JavaScript</p>
+    </div>
+
+    <div class="how-to-grid">
+
+      <!-- Step 1 -->
+      <div class="how-step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>ضع ملف APK في مجلد <code>uploads/</code></h4>
+          <p>انسخ ملف APK الخاص بتطبيقك إلى المجلد:</p>
+          <div class="code-block">codrix-store/uploads/myapp-v1.0.apk</div>
+          <p style="margin-top:10px;color:var(--text-muted);font-size:0.82rem">
+            أو استخدم رابط GitHub Release مباشر بدلاً من ذلك.
+          </p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="how-step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>افتح ملف <code>js/app.js</code> وعدّل المصفوفة</h4>
+          <p>أضف بيانات تطبيقك داخل <code>MY_APPS</code>:</p>
+          <div class="code-block">{
+  id: 'app-1',
+  name: 'اسم تطبيقك',
+  version: '1.0.0',
+  size: '25 MB',
+  category: 'أدوات',
+  desc: 'وصف مختصر للتطبيق...',
+  icon: null,
+  iconEmoji: '📱',
+  iconBg: 'linear-gradient(135deg,#1e3a8a,#3b82f6)',
+  downloads: 0,
+  rating: 5.0,
+  date: Date.now(),
+  fileName: 'myapp-v1.0.apk',
+  fileUrl: 'uploads/myapp-v1.0.apk',
+}</div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="how-step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>احفظ وافتح الموقع</h4>
+          <p>سيظهر تطبيقك فوراً في الشبكة مع زر تحميل مباشر. كرر الخطوة لكل تطبيق إضافي.</p>
+          <div class="step-tip">
+            <i class="fas fa-lightbulb"></i>
+            <span>لاستخدام رابط GitHub: ضع رابط الـ Release الكامل في حقل <code>fileUrl</code></span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════════════════
-     FEATURES SECTION
+     FEATURES
 ═══════════════════════════════════════════════════ -->
 <section class="features-section" id="featuresSection">
   <div class="container">
@@ -236,32 +300,32 @@
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-download"></i></div>
         <h3 class="feature-title">تحميل مباشر وسريع</h3>
-        <p class="feature-desc">حمّل أي تطبيق APK مباشرة بضغطة زر واحدة دون تسجيل أو قيود.</p>
+        <p class="feature-desc">حمّل أي تطبيق APK مباشرة بضغطة زر واحدة بدون إعادة توجيه أو خطوات معقدة.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
         <h3 class="feature-title">أمان وحماية كاملة</h3>
-        <p class="feature-desc">جميع التطبيقات مفحوصة وآمنة لضمان حماية جهازك وبياناتك الشخصية.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon"><i class="fas fa-cloud-upload-alt"></i></div>
-        <h3 class="feature-title">رفع سهل للتطبيقات</h3>
-        <p class="feature-desc">أضف تطبيقاتك بسهولة عبر لوحة الرفع المدمجة مع دعم السحب والإفلات.</p>
+        <p class="feature-desc">التطبيقات المعروضة مُختارة بعناية لضمان حماية جهازك وبياناتك الشخصية.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-search"></i></div>
         <h3 class="feature-title">بحث وتصفية متقدمة</h3>
-        <p class="feature-desc">ابحث وصفِّح التطبيقات حسب التصنيف والاسم والتقييم والشعبية.</p>
+        <p class="feature-desc">ابحث وصفِّح التطبيقات حسب التصنيف والاسم والتقييم والشعبية بسهولة تامة.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
         <h3 class="feature-title">تصميم متجاوب</h3>
-        <p class="feature-desc">واجهة عصرية تعمل بشكل مثالي على جميع الأجهزة والشاشات.</p>
+        <p class="feature-desc">واجهة عصرية تعمل بشكل مثالي على الجوال والتابلت والكمبيوتر.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="fas fa-globe"></i></div>
-        <h3 class="feature-title">دعم عربي كامل</h3>
-        <p class="feature-desc">الموقع مبني من الأساس للغة العربية مع دعم RTL واجهة احترافية.</p>
+        <h3 class="feature-title">دعم عربي كامل RTL</h3>
+        <p class="feature-desc">مبني من الأساس للغة العربية مع دعم الكتابة من اليمين لليسار.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+        <h3 class="feature-title">أداء فائق السرعة</h3>
+        <p class="feature-desc">موقع خفيف وسريع يعمل بدون تحميل ثقيل أو انتظار — فتح فوري.</p>
       </div>
     </div>
   </div>
@@ -274,18 +338,19 @@
   <div class="container">
     <div class="footer-grid">
 
-      <!-- Brand column -->
       <div class="footer-brand">
-        <a href="#" class="nav-logo" style="margin-bottom:0">
-          <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px">
+        <a href="#" class="nav-logo">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px;flex-shrink:0">
             <defs>
               <linearGradient id="footerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%"   stop-color="#3aa6ff"/>
                 <stop offset="100%" stop-color="#1e90ff"/>
               </linearGradient>
             </defs>
-            <path d="M 75 18 L 40 18 Q 15 18 15 50 Q 15 82 40 82 L 75 82 L 75 68 L 44 68 Q 30 68 30 50 Q 30 32 44 32 L 75 32 Z" fill="url(#footerGrad)" opacity="0.9"/>
-            <path d="M 70 30 L 46 30 Q 26 30 26 50 Q 26 70 46 70 L 70 70 L 70 60 L 48 60 Q 36 60 36 50 Q 36 40 48 40 L 70 40 Z" fill="#0a0c10" opacity="0.6"/>
+            <path d="M75 18L40 18Q15 18 15 50Q15 82 40 82L75 82L75 68L44 68Q30 68 30 50Q30 32 44 32L75 32Z"
+                  fill="url(#footerGrad)" opacity="0.9"/>
+            <path d="M70 30L46 30Q26 30 26 50Q26 70 46 70L70 70L70 60L48 60Q36 60 36 50Q36 40 48 40L70 40Z"
+                  fill="#0a0c10" opacity="0.6"/>
             <text x="38" y="57" font-family="monospace" font-size="18" fill="url(#footerGrad)">&lt;/&gt;</text>
           </svg>
           <div class="logo-text">
@@ -294,29 +359,28 @@
           </div>
         </a>
         <p class="footer-desc">
-          منصة CODRIX هي وجهتك الأولى لتحميل تطبيقات الأندرويد بشكل مجاني وآمن. نقدم أفضل التطبيقات بواجهة عربية احترافية.
+          منصة CODRIX هي وجهتك الأولى لتحميل تطبيقات الأندرويد بشكل مجاني وآمن.
+          نقدم أفضل التطبيقات بواجهة عربية احترافية وتحميل مباشر بضغطة زر.
         </p>
         <div class="footer-socials">
           <a href="#" class="social-btn" title="تيليغرام"><i class="fab fa-telegram-plane"></i></a>
-          <a href="#" class="social-btn" title="تويتر"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-btn" title="تويتر / X"><i class="fab fa-twitter"></i></a>
           <a href="#" class="social-btn" title="يوتيوب"><i class="fab fa-youtube"></i></a>
           <a href="#" class="social-btn" title="إنستغرام"><i class="fab fa-instagram"></i></a>
           <a href="#" class="social-btn" title="واتساب"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
 
-      <!-- Links column 1 -->
       <div>
         <h4 class="footer-heading">روابط سريعة</h4>
         <ul class="footer-links">
           <li><a class="footer-link" href="#" onclick="scrollToSection('hero')">الرئيسية</a></li>
           <li><a class="footer-link" href="#" onclick="scrollToSection('appsSection')">التطبيقات</a></li>
           <li><a class="footer-link" href="#" onclick="scrollToSection('featuresSection')">المميزات</a></li>
-          <li><a class="footer-link" href="#" onclick="openUploadModal()">رفع تطبيق</a></li>
+          <li><a class="footer-link" href="#" onclick="scrollToSection('howToSection')">كيفية الإضافة</a></li>
         </ul>
       </div>
 
-      <!-- Links column 2 -->
       <div>
         <h4 class="footer-heading">التصنيفات</h4>
         <ul class="footer-links">
@@ -328,7 +392,6 @@
         </ul>
       </div>
 
-      <!-- Links column 3 -->
       <div>
         <h4 class="footer-heading">الدعم</h4>
         <ul class="footer-links">
@@ -349,124 +412,11 @@
 </footer>
 
 <!-- ═══════════════════════════════════════════════════
-     UPLOAD MODAL
-═══════════════════════════════════════════════════ -->
-<div class="modal-overlay" id="uploadModal">
-  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-header">
-      <h2 class="modal-title" id="modalTitle">
-        <i class="fas fa-cloud-upload-alt"></i>
-        رفع تطبيق جديد
-      </h2>
-      <button class="modal-close" onclick="closeUploadModal()" aria-label="إغلاق">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-
-    <div class="modal-body">
-      <form id="uploadForm" novalidate>
-
-        <!-- APK File Drop Zone -->
-        <div class="form-group full" style="margin-bottom:20px">
-          <label class="form-label"><i class="fas fa-file-archive"></i> ملف APK <span class="required">*</span></label>
-          <div class="dropzone" id="apkDropzone">
-            <input type="file" id="apkFileInput" accept=".apk,.xapk" />
-            <i class="fas fa-cloud-upload-alt dropzone-icon"></i>
-            <div class="dropzone-text">اسحب ملف APK هنا أو انقر للاختيار</div>
-            <div class="dropzone-hint">الصيغ المقبولة: .apk, .xapk — الحجم الأقصى: 2 GB</div>
-            <div class="dropzone-filename" id="apkFilename"></div>
-          </div>
-        </div>
-
-        <div class="form-grid">
-
-          <!-- App Name -->
-          <div class="form-group">
-            <label class="form-label" for="appName"><i class="fas fa-tag"></i> اسم التطبيق <span class="required">*</span></label>
-            <input type="text" class="form-input" id="appName" placeholder="مثال: متصفح الفضاء" required />
-          </div>
-
-          <!-- Version -->
-          <div class="form-group">
-            <label class="form-label" for="appVersion"><i class="fas fa-code-branch"></i> رقم الإصدار <span class="required">*</span></label>
-            <input type="text" class="form-input" id="appVersion" placeholder="مثال: 1.0.0" required />
-          </div>
-
-          <!-- Size -->
-          <div class="form-group">
-            <label class="form-label" for="appSize"><i class="fas fa-hdd"></i> حجم الملف</label>
-            <input type="text" class="form-input" id="appSize" placeholder="سيُحسب تلقائياً" />
-          </div>
-
-          <!-- Category -->
-          <div class="form-group">
-            <label class="form-label" for="appCategory"><i class="fas fa-th-large"></i> التصنيف <span class="required">*</span></label>
-            <select class="form-select" id="appCategory" required>
-              <option value="">-- اختر التصنيف --</option>
-              <option value="أدوات">🔧 أدوات</option>
-              <option value="تواصل">💬 تواصل</option>
-              <option value="تعليم">🎓 تعليم</option>
-              <option value="صحة">💪 صحة ولياقة</option>
-              <option value="ترفيه">🎵 ترفيه</option>
-              <option value="ألعاب">🎮 ألعاب</option>
-              <option value="أعمال">💼 أعمال</option>
-            </select>
-          </div>
-
-          <!-- Emoji Icon -->
-          <div class="form-group">
-            <label class="form-label" for="appEmoji"><i class="fas fa-smile"></i> رمز الأيقونة (Emoji)</label>
-            <input type="text" class="form-input" id="appEmoji" placeholder="مثال: 📱 🎮 🔧" maxlength="2" />
-          </div>
-
-          <!-- Colors -->
-          <div class="form-group">
-            <label class="form-label"><i class="fas fa-palette"></i> لون الخلفية</label>
-            <div style="display:flex;gap:10px;align-items:center">
-              <input type="color" class="form-input" id="appColor1" value="#1e3a8a" style="height:42px;padding:4px;cursor:pointer;width:50%" />
-              <input type="color" class="form-input" id="appColor2" value="#3b82f6" style="height:42px;padding:4px;cursor:pointer;width:50%" />
-            </div>
-          </div>
-
-          <!-- Description -->
-          <div class="form-group full">
-            <label class="form-label" for="appDesc"><i class="fas fa-align-right"></i> وصف التطبيق</label>
-            <textarea class="form-textarea" id="appDesc" placeholder="اكتب وصفاً مختصراً وجذاباً للتطبيق..." rows="3"></textarea>
-          </div>
-
-          <!-- Icon Upload -->
-          <div class="form-group full">
-            <label class="form-label"><i class="fas fa-image"></i> أيقونة التطبيق (صورة)</label>
-            <div class="icon-upload-area">
-              <div class="icon-preview" id="iconPreview">
-                <i class="fas fa-image"></i>
-              </div>
-              <div class="icon-upload-btn">
-                <input type="file" id="iconFileInput" accept="image/*" />
-                <i class="fas fa-upload"></i> اختر صورة الأيقونة
-                <br><small style="color:var(--text-muted);font-size:0.75rem">PNG, JPG, WebP — أبعاد مثالية: 512×512</small>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <button type="submit" class="btn-submit">
-          <i class="fas fa-plus-circle"></i>
-          إضافة التطبيق إلى المتجر
-        </button>
-
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════════════════
      APP DETAIL OVERLAY
 ═══════════════════════════════════════════════════ -->
 <div class="app-detail-overlay" id="appDetailOverlay">
   <div class="app-detail-box">
-    <!-- Rendered by JS -->
+    <!-- Injected by JS -->
   </div>
 </div>
 
@@ -482,9 +432,7 @@
   <i class="fas fa-chevron-up"></i>
 </button>
 
-<!-- ═══════════════════════════════════════════════════
-     SCRIPTS
-═══════════════════════════════════════════════════ -->
+<!-- Script -->
 <script src="js/app.js"></script>
 </body>
 </html>
