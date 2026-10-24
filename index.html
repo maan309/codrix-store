@@ -1,175 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>subX | المنصة التقنية وتطبيقات الأندرويد المتقدمة</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <!-- Custom Legendary CSS -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080611">
+  <meta name="description" content="SUBX — اكتشف تطبيق أموالي لإدارة الدخل والمصروفات وتحميله للأندرويد.">
+  <title>SUBX | أموالي — تحكم اليوم واطمئن للمستقبل</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/app.js"></script>
 </head>
 <body>
-
-    <!-- الهيدر الاحترافي -->
-    <header>
-        <a href="#" class="nav-brand">
-            <img src="logo.png" alt="subX Logo" onerror="this.style.display='none'">
-            <span>subX</span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="#hero">الرئيسية</a></li>
-            <li><a href="#about">من نحن</a></li>
-            <li><a href="#services">خدماتنا</a></li>
-            <li><a href="#portfolio">مشاريعنا</a></li>
-            <li><a href="#contact" class="nav-btn">تواصل معنا</a></li>
-        </ul>
-    </header>
-
-    <!-- الواجهة الرئيسية الأسطورية (Hero) -->
-    <section class="hero" id="hero">
-        <div class="hero-badge">
-            <i class="fas fa-shield-alt"></i> منصة التطوير والحلول البرمجية الاحترافية
-        </div>
-        <img src="logo.png" alt="subX Logo" class="hero-logo" onerror="this.style.display='none'">
-        <h1>نبتكر مستقبل التقنية<br>بأعلى معايير <span>الإبداع</span></h1>
-        <p>نحن في subX نصمم ونطور تطبيقات أندرويد متطورة وحلول برمجية استثنائية تجمع بين الأداء الفائق، الأمان العالي، والتصميم الآسر.</p>
-        
-        <div class="hero-actions">
-            <a href="#portfolio" class="btn-main">
-                <i class="fas fa-rocket"></i> استكشف تطبيقاتنا
-            </a>
-            <a href="#contact" class="btn-sec">
-                <i class="fas fa-paper-plane"></i> تواصل مع المطور
-            </a>
-        </div>
+  <div class="progress" id="progress"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="القائمة الرئيسية">
+      <a class="brand" href="#home" aria-label="SUBX الرئيسية"><span class="brand-symbol">⌘</span><span>SUB<span class="accent">X</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="navLinks"><a href="#home">الرئيسية</a><a href="#about">عن التطبيق</a><a href="#features">المميزات</a><a href="#download">التحميل</a></div>
+      <a class="nav-cta" href="#download">حمّل التطبيق <span aria-hidden="true">↙</span></a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div><div class="hero-orbit orbit-two" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="eyebrow reveal"><span class="live-dot"></span> SUBX DIGITAL EXPERIENCE <span class="line"></span> مستقبل الأدوات الرقمية</div>
+        <div class="hero-logo-wrap reveal"><img class="hero-logo" src="uploads/logo.jpg" alt="شعار SUBX" loading="eager" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-fallback">SUB<span>X</span></span></div>
+        <h1 class="reveal">التقنية، <span class="gradient-text">بطابع مختلف.</span></h1>
+        <p class="hero-description reveal">في SUBX نحوّل الأفكار إلى تجارب رقمية استثنائية. اكتشف <strong>أموالي</strong>، تطبيقك الذكي لإدارة حياتك المالية ببساطة وأناقة.</p>
+        <div class="hero-actions reveal"><a class="button button-primary" href="#download">تحميل أموالي <span>↙</span></a><a class="button button-ghost" href="#features">استكشف المميزات <span>←</span></a></div>
+        <div class="hero-meta reveal"><span><i></i> تطبيق أندرويد</span><span class="meta-divider"></span><span><i></i> واجهة عربية</span><span class="meta-divider"></span><span><i></i> تجربة مالية ذكية</span></div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="انتقل للتعريف">SCROLL TO EXPLORE <span>↓</span></a>
     </section>
-
-    <!-- شريط الإحصائيات -->
-    <div class="stats-bar">
-        <div class="stat-card">
-            <h3>100%</h3>
-            <p>أمان وحماية موثوقة</p>
-        </div>
-        <div class="stat-card">
-            <h3>v1.0</h3>
-            <p>أحدث إصدارات التطبيقات</p>
-        </div>
-        <div class="stat-card">
-            <h3>24/7</h3>
-            <p>دعم فني وتطوير مستمر</p>
-        </div>
-    </div>
-
-    <!-- قسم من نحن -->
-    <section class="section" id="about">
-        <div class="section-header">
-            <h2 class="section-title">من <span>نحن</span>؟</h2>
-            <p class="section-desc">فريق تقني متكامل يسعى لترك بصمة فريدة في عالم البرمجيات وتطبيقات الهاتف الذكي</p>
-        </div>
-
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
-                <h3>رؤيتنا المبتكرة</h3>
-                <p>نؤمن بأن البرمجيات يجب أن تكون سهلة، سريعة، وذات قيمة حقيقية تحل مشاكل المستخدمين وتوفر لهم تجربة فريدة من نوعها.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-                <h3>هندسة البرمجيات</h3>
-                <p>نعتمد أحدث التقنيات وأدوات التطوير البرمجي العالمية لبناء تطبيقات أندرويد مستقرة وعالية الأداء دون أي تعقيد.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-lock"></i></div>
-                <h3>الخصوصية والأمان</h3>
-                <p>نضع أمن بيانات المستخدمين في قمة أولوياتنا، ونضمن خلو تطبيقاتنا من أي ثغرات أو مخاطر أمنية على الأجهزة.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم خدماتنا -->
-    <section class="section" id="services" style="background: rgba(18, 16, 25, 0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-        <div class="section-header">
-            <h2 class="section-title">ماذا <span>نقدم</span>؟</h2>
-            <p class="section-desc">خدمات تقنية متطورة مصممة خصيصاً لتلبية طموحاتك الرقمية</p>
-        </div>
-
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-mobile-screen"></i></div>
-                <h3>تطوير تطبيقات أندرويد</h3>
-                <p>برمجة وتصميم تطبيقات مخصصة لأنظمة أندرويد بواجهات عصرية وتجربة استخدام سلسة ومريحة.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
-                <h3>تصميم واجهات المستخدم UI/UX</h3>
-                <p>ابتكار تصاميم بصرية جذابة ومريحة للعين تضمن تفاعل المستخدم بسلاسة تامة مع التطبيق.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-gauge-high"></i></div>
-                <h3>تحسين الأداء والسرعة</h3>
-                <p>تحسين الأكواد البرمجية وسرعة استجابة التطبيقات والمواقع لتوفير أفضل أداء ممكن.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم مشاريعنا وأعمالنا (Portfolio) -->
-    <section class="section" id="portfolio">
-        <div class="section-header">
-            <h2 class="section-title">أعمالنا و<span>مشاريعنا المميزة</span></h2>
-            <p class="section-desc">استعرض أحدث تطبيقاتنا الجاهزة للتحميل المباشر والاستخدام الفوري</p>
-        </div>
-
-        <div class="apps-showcase-container" id="legendaryAppsGrid">
-            <!-- يتم حقن التطبيقات ديناميكياً عبر ملف js/app.js -->
-        </div>
-    </section>
-
-    <!-- قسم التواصل الأسطوري -->
-    <section class="section" id="contact">
-        <div class="section-header">
-            <h2 class="section-title">تواصل <span>مع المطور</span></h2>
-            <p class="section-desc">لديك استفسار، اقتراح، أو مشروع ترغب بتنفيذه؟ أرسل رسالة مباشرة وسنكون سعداء بردك</p>
-        </div>
-
-        <div class="contact-legendary-box">
-            <form action="mailto:maa321584@gmail.com" method="get" enctype="text/plain">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">الاسم الكريم</label>
-                        <input type="text" id="name" class="form-control" placeholder="اكتب اسمك هنا..." required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">موضوع الرسالة</label>
-                        <input type="text" id="subject" name="subject" class="form-control" placeholder="موضوع الاستفسار..." required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="body">نص الرسالة بالتفصيل</label>
-                    <textarea id="body" name="body" rows="6" class="form-control" placeholder="اكتب رسالتك هنا..." required></textarea>
-                </div>
-                <button type="submit" class="submit-legendary-btn">
-                    <i class="fas fa-paper-plane"></i> إرسال الرسالة الآن
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- الفوتر الفخم -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand-text">
-                <img src="logo.png" alt="subX Logo" style="width: 35px; height: 35px; object-fit: contain;" onerror="this.style.display='none'">
-                <span>subX</span> Ecosystem
-            </div>
-            <p>© 2026 subX — جميع الحقوق محفوظة للمطور. تم التطوير بأعلى معايير الإبداع.</p>
-            <p style="color: var(--accent-cyan); font-weight: 600;">للتواصل المباشر والدعم الفني: maa321584@gmail.com</p>
-        </div>
-    </footer>
-
-    <!-- Legendary JS Engine -->
-    <script src="js/app.js"></script>
+    <section class="intro section" id="about"><div class="container intro-grid">
+      <div class="intro-content reveal"><div class="section-kicker">01 / MEET AMWALI</div><h2>أموالك تحت سيطرتك.<br><span class="gradient-text">مستقبلك بين يديك.</span></h2><p>أموالي هو تطبيق ذكي وعصري لإدارة الأموال والمصروفات الشخصية. نظّم دخلك، تابع نفقاتك، وتحكّم بميزانيتك من مكان واحد، بتجربة عربية سهلة وأنيقة.</p><a class="text-link" href="#features">تعرّف على الإمكانيات <span>↙</span></a></div>
+      <div class="visual-card reveal" aria-label="عرض فني لتطبيق أموالي"><div class="visual-grid"></div><div class="visual-halo"></div><div class="visual-top">AMWALI <span>✦ FINANCE REIMAGINED</span></div><div class="visual-icon">◈</div><div class="visual-title">أموالي</div><div class="visual-subtitle">تحكم اليوم، واطمئن للمستقبل.</div><div class="visual-bottom"><span>SMART FINANCE</span><span>2026 / SUBX</span></div></div>
+    </div></section>
+    <section class="features section" id="features"><div class="container"><div class="section-heading reveal"><div class="section-kicker">02 / BUILT FOR YOU</div><h2>كل ما تحتاجه.<br><span class="gradient-text">في مكان واحد.</span></h2><p>أدوات عملية تساعدك على تنظيم أموالك واتخاذ قرارات مالية أوضح.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card reveal"><div class="feature-icon">↗</div><span class="feature-num">01</span><h3>إدارة الدخل والمصروفات</h3><p>سجّل معاملاتك المالية وتابع رصيدك بسهولة.</p></article>
+        <article class="feature-card reveal"><div class="feature-icon">▥</div><span class="feature-num">02</span><h3>الإحصائيات والتقارير</h3><p>ملخصات واضحة لمصادر الدخل وأوجه الإنفاق.</p></article>
+        <article class="feature-card reveal"><div class="feature-icon">⇄</div><span class="feature-num">03</span><h3>تحويل العملات</h3><p>حوّل بين الريال اليمني والسعودي والدولار، وحدّد أسعار الصرف بنفسك.</p></article>
+        <article class="feature-card reveal"><div class="feature-icon">▦</div><span class="feature-num">04</span><h3>السجل المالي</h3><p>راجع معاملاتك السابقة حسب التاريخ والتصنيف.</p></article>
+        <article class="feature-card reveal"><div class="feature-icon">◇</div><span class="feature-num">05</span><h3>الخصوصية والأمان</h3><p>خيارات رمز سري وبصمة على الأجهزة المدعومة.</p></article>
+        <article class="feature-card reveal"><div class="feature-icon">◐</div><span class="feature-num">06</span><h3>الوضع الليلي والنهاري</h3><p>مظهر عصري قابل للتخصيص حسب تفضيلك.</p></article>
+        <article class="feature-card reveal"><div class="feature-icon">أ</div><span class="feature-num">07</span><h3>واجهة عربية أنيقة</h3><p>تنقل سلس وتجربة استخدام مريحة وواضحة.</p></article>
+        <article class="feature-card reveal"><div class="feature-icon">ϟ</div><span class="feature-num">08</span><h3>تجربة سريعة وعملية</h3><p>أدوات يومية لتنظيم حياتك المالية بسهولة.</p></article>
+      </div>
+    </div></section>
+    <section class="statement section"><div class="container statement-inner reveal"><span class="quote-mark">“</span><h2>إدارة أموالك لا يجب<br>أن تكون <span class="gradient-text">معقدة.</span></h2><p>سواء كنت طالبًا أو موظفًا أو صاحب عمل، أموالي يساعدك على فهم مصروفاتك وتنظيم دخلك.</p></div></section>
+    <section class="download section" id="download"><div class="container"><div class="download-panel reveal"><div class="download-aura"></div><div class="download-content"><div class="section-kicker">03 / GET STARTED</div><div class="download-tag">✦ متوفر للأندرويد</div><h2>ابدأ التحكم<br><span class="gradient-text">بأموالك اليوم.</span></h2><p>حمّل تطبيق أموالي واستمتع بتجربة أبسط لإدارة الدخل والمصروفات.</p><a class="button button-primary download-button" href="uploads/app-debug.apk" download="Amwali.apk" type="application/vnd.android.package-archive">↓ <span>تحميل تطبيق أموالي</span></a><p class="download-note">ملف APK لأجهزة Android. قد تحتاج للسماح بالتثبيت من هذا المصدر بعد التأكد من موثوقية الملف.</p></div><div class="download-art" aria-hidden="true"><div class="download-ring ring-a"></div><div class="download-ring ring-b"></div><div class="download-glyph">A<span>✦</span></div></div></div></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><div><a class="footer-brand" href="#home">SUB<span>X</span></a><p>نحو تجارب رقمية تصنع الفرق.</p></div><div class="footer-right"><a href="mailto:maa321584@gmail.com">الدعم الفني ↗</a><span>© 2026 SUBX — جميع الحقوق محفوظة للمطور.</span></div></div></footer>
 </body>
 </html>
