@@ -1,12 +1,383 @@
-/* CODRIX Store Base Styles */
+/* =====================================================
+   subX Official Stylesheet - Ultra Pro Edition
+   ================================================───── */
+
+:root {
+    --bg-color: #08070b;
+    --card-bg: #13111c;
+    --border-color: #26223b;
+    --primary-color: #a855f7;
+    --primary-glow: rgba(168, 85, 247, 0.4);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-green: #10b981;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
     font-family: 'Tajawal', Tahoma, sans-serif;
-    background-color: #0b0f19;
-    color: #f8fafc;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
     direction: rtl;
+}
+
+/* الهيدر والشريط العلوي */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(8, 7, 11, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.nav-brand img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* الواجهة الرئيسية (Hero) */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 60px;
+    background: radial-gradient(circle at center, rgba(168, 85, 247, 0.12) 0%, transparent 70%);
+}
+
+.hero-logo {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 0 25px var(--primary-glow));
+    animation: floatLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #fff, var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-main {
+    background: linear-gradient(135deg, #9333ea, var(--primary-color));
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 25px var(--primary-glow);
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-main:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(168, 85, 247, 0.6);
+}
+
+/* الأقسام العامة */
+.section {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.section-title span {
+    color: var(--primary-color);
+}
+
+.section-desc {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 50px;
+    font-size: 1.05rem;
+}
+
+/* قسم من نحن */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.about-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.about-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.about-card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* قسم أعمالنا وتطبيقاتنا الديناميكي */
+.apps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.app-showcase {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.app-showcase:hover {
+    border-color: rgba(168, 85, 247, 0.4);
+}
+
+.app-top {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.app-icon-box {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #059669, var(--accent-green));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    box-shadow: 0 10px 20px rgba(16,185,129,0.3);
+}
+
+.app-details h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.app-tag {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--accent-green);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.app-description {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.app-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.feature-box {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.feature-box h5 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.feature-box p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #059669, var(--accent-green));
+    color: #fff;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 14px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.1rem;
+    display: block;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(16,185,129,0.3);
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, #047857, #059669);
+    transform: translateY(-2px);
+}
+
+/* قسم التواصل */
+.contact-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 14px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.submit-btn {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #9333ea;
+}
+
+/* الفوتر */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    background: #050407;
+}
+
+footer span {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    header { padding: 15px 20px; }
+    .nav-links { display: none; }
+    .hero h1 { font-size: 2.2rem; }
+    .app-top { flex-direction: column; align-items: flex-start; }
 }
