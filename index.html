@@ -3,102 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>subX | المنصة التقنية وتطبيقات الأندرويد</title>
+    <title>subX | المنصة التقنية وتطبيقات الأندرويد المتقدمة</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
+    <!-- Custom Legendary CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- الهيدر -->
+    <!-- الهيدر الاحترافي -->
     <header>
         <a href="#" class="nav-brand">
             <img src="logo.png" alt="subX Logo" onerror="this.style.display='none'">
             <span>subX</span>
         </a>
         <ul class="nav-links">
+            <li><a href="#hero">الرئيسية</a></li>
             <li><a href="#about">من نحن</a></li>
-            <li><a href="#works">أعمالنا ومشاريعنا</a></li>
-            <li><a href="#contact">تواصل معنا</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#portfolio">مشاريعنا</a></li>
+            <li><a href="#contact" class="nav-btn">تواصل معنا</a></li>
         </ul>
     </header>
 
-    <!-- الواجهة الرئيسية -->
-    <section class="hero">
+    <!-- الواجهة الرئيسية الأسطورية (Hero) -->
+    <section class="hero" id="hero">
+        <div class="hero-badge">
+            <i class="fas fa-shield-alt"></i> منصة التطوير والحلول البرمجية الاحترافية
+        </div>
         <img src="logo.png" alt="subX Logo" class="hero-logo" onerror="this.style.display='none'">
-        <h1>مرحباً بك في عالم subX</h1>
-        <p>نبتكر حلولاً برمجية وتطبيقات ذكية تجمع بين قوة الأداء وفخامة التصميم لتلبية احتياجاتك الرقمية بكل احترافية.</p>
-        <a href="#works" class="btn-main">
-            <i class="fas fa-rocket"></i> استكشف مشاريعنا
-        </a>
+        <h1>نبتكر مستقبل التقنية<br>بأعلى معايير <span>الإبداع</span></h1>
+        <p>نحن في subX نصمم ونطور تطبيقات أندرويد متطورة وحلول برمجية استثنائية تجمع بين الأداء الفائق، الأمان العالي، والتصميم الآسر.</p>
+        
+        <div class="hero-actions">
+            <a href="#portfolio" class="btn-main">
+                <i class="fas fa-rocket"></i> استكشف تطبيقاتنا
+            </a>
+            <a href="#contact" class="btn-sec">
+                <i class="fas fa-paper-plane"></i> تواصل مع المطور
+            </a>
+        </div>
     </section>
+
+    <!-- شريط الإحصائيات -->
+    <div class="stats-bar">
+        <div class="stat-card">
+            <h3>100%</h3>
+            <p>أمان وحماية موثوقة</p>
+        </div>
+        <div class="stat-card">
+            <h3>v1.0</h3>
+            <p>أحدث إصدارات التطبيقات</p>
+        </div>
+        <div class="stat-card">
+            <h3>24/7</h3>
+            <p>دعم فني وتطوير مستمر</p>
+        </div>
+    </div>
 
     <!-- قسم من نحن -->
     <section class="section" id="about">
-        <h2 class="section-title">من <span>نحن</span>؟</h2>
-        <p class="section-desc">فريق تقني شغوف ببناء وتطوير التجارب الرقمية المميزة</p>
-        
-        <div class="about-grid">
-            <div class="about-card">
-                <i class="fas fa-code"></i>
-                <h3>رؤيتنا التقنية</h3>
-                <p>نسعى لتقديم تطبيقات وأدوات برمجية ذات كفاءة عالية، مصممة بعناية فائقة لتسهيل حياة المستخدمين وحل المشكلات المعقدة بأبسط الطرق.</p>
+        <div class="section-header">
+            <h2 class="section-title">من <span>نحن</span>؟</h2>
+            <p class="section-desc">فريق تقني متكامل يسعى لترك بصمة فريدة في عالم البرمجيات وتطبيقات الهاتف الذكي</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>رؤيتنا المبتكرة</h3>
+                <p>نؤمن بأن البرمجيات يجب أن تكون سهلة، سريعة، وذات قيمة حقيقية تحل مشاكل المستخدمين وتوفر لهم تجربة فريدة من نوعها.</p>
             </div>
-            <div class="about-card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>الأمان والجودة</h3>
-                <p>نلتزم بأعلى معايير الأمان البرمجي وحماية البيانات، لضمان تجربة مستخدم آمنة ومستقرة في كافة مشاريعنا ومنتجاتنا الرقمية.</p>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>هندسة البرمجيات</h3>
+                <p>نعتمد أحدث التقنيات وأدوات التطوير البرمجي العالمية لبناء تطبيقات أندرويد مستقرة وعالية الأداء دون أي تعقيد.</p>
             </div>
-            <div class="about-card">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>تطوير الأندرويد</h3>
-                <p>نتخصص في هندسة وتطوير تطبيقات الهواتف الذكية بنظام أندرويد، مع تركيز تام على سلاسة واجهات الاستخدام والأداء فائق السرعة.</p>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-lock"></i></div>
+                <h3>الخصوصية والأمان</h3>
+                <p>نضع أمن بيانات المستخدمين في قمة أولوياتنا، ونضمن خلو تطبيقاتنا من أي ثغرات أو مخاطر أمنية على الأجهزة.</p>
             </div>
         </div>
     </section>
 
-    <!-- قسم أعمالنا وتطبيقاتنا (يُعرض ديناميكياً من ملف app.js) -->
-    <section class="section" id="works">
-        <h2 class="section-title">أعمالنا و<span>مشاريعنا</span></h2>
-        <p class="section-desc">أحدث التطبيقات والحلول التي تم تطويرها وإطلاقها رسمياً</p>
+    <!-- قسم خدماتنا -->
+    <section class="section" id="services" style="background: rgba(18, 16, 25, 0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="section-header">
+            <h2 class="section-title">ماذا <span>نقدم</span>؟</h2>
+            <p class="section-desc">خدمات تقنية متطورة مصممة خصيصاً لتلبية طموحاتك الرقمية</p>
+        </div>
 
-        <div class="apps-grid" id="dynamicAppsContainer">
-            <!-- سيتم تعبئة التطبيقات تلقائياً عبر ملف js/app.js -->
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-mobile-screen"></i></div>
+                <h3>تطوير تطبيقات أندرويد</h3>
+                <p>برمجة وتصميم تطبيقات مخصصة لأنظمة أندرويد بواجهات عصرية وتجربة استخدام سلسة ومريحة.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                <h3>تصميم واجهات المستخدم UI/UX</h3>
+                <p>ابتكار تصاميم بصرية جذابة ومريحة للعين تضمن تفاعل المستخدم بسلاسة تامة مع التطبيق.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-gauge-high"></i></div>
+                <h3>تحسين الأداء والسرعة</h3>
+                <p>تحسين الأكواد البرمجية وسرعة استجابة التطبيقات والمواقع لتوفير أفضل أداء ممكن.</p>
+            </div>
         </div>
     </section>
 
-    <!-- قسم تواصل معنا -->
+    <!-- قسم مشاريعنا وأعمالنا (Portfolio) -->
+    <section class="section" id="portfolio">
+        <div class="section-header">
+            <h2 class="section-title">أعمالنا و<span>مشاريعنا المميزة</span></h2>
+            <p class="section-desc">استعرض أحدث تطبيقاتنا الجاهزة للتحميل المباشر والاستخدام الفوري</p>
+        </div>
+
+        <div class="apps-showcase-container" id="legendaryAppsGrid">
+            <!-- يتم حقن التطبيقات ديناميكياً عبر ملف js/app.js -->
+        </div>
+    </section>
+
+    <!-- قسم التواصل الأسطوري -->
     <section class="section" id="contact">
-        <div class="contact-box">
-            <h2 class="section-title" style="text-align: right; margin-bottom: 10px;">تواصل <span>معنا</span></h2>
-            <p style="color: var(--text-muted); margin-bottom: 30px;">لديك استفسار، مشروع، أو ترغب بمراسلتنا؟ أرسل رسالة مباشرة وسيتم تحويلها فوراً إلى بريدنا الإلكتروني.</p>
-            
+        <div class="section-header">
+            <h2 class="section-title">تواصل <span>مع المطور</span></h2>
+            <p class="section-desc">لديك استفسار، اقتراح، أو مشروع ترغب بتنفيذه؟ أرسل رسالة مباشرة وسنكون سعداء بردك</p>
+        </div>
+
+        <div class="contact-legendary-box">
             <form action="mailto:maa321584@gmail.com" method="get" enctype="text/plain">
-                <div class="form-group">
-                    <label for="subject">موضوع الرسالة</label>
-                    <input type="text" id="subject" name="subject" class="form-control" placeholder="اكتب موضوع رسالتك..." required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">الاسم الكريم</label>
+                        <input type="text" id="name" class="form-control" placeholder="اكتب اسمك هنا..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">موضوع الرسالة</label>
+                        <input type="text" id="subject" name="subject" class="form-control" placeholder="موضوع الاستفسار..." required>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <label for="body">نص الرسالة</label>
-                    <textarea id="body" name="body" rows="4" class="form-control" placeholder="اكتب تفاصيل رسالتك هنا..." required></textarea>
+                    <label for="body">نص الرسالة بالتفصيل</label>
+                    <textarea id="body" name="body" rows="6" class="form-control" placeholder="اكتب رسالتك هنا..." required></textarea>
                 </div>
-                <button type="submit" class="submit-btn">
-                    <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                <button type="submit" class="submit-legendary-btn">
+                    <i class="fas fa-paper-plane"></i> إرسال الرسالة الآن
                 </button>
             </form>
         </div>
     </section>
 
-    <!-- الفوتر -->
+    <!-- الفوتر الفخم -->
     <footer>
-        <p>© 2026 <span>subX</span> — جميع الحقوق محفوظة للمطور.</p>
-        <p style="margin-top: 8px;">للتواصل والدعم الفني: maa321584@gmail.com</p>
+        <div class="footer-content">
+            <div class="footer-brand-text">
+                <img src="logo.png" alt="subX Logo" style="width: 35px; height: 35px; object-fit: contain;" onerror="this.style.display='none'">
+                <span>subX</span> Ecosystem
+            </div>
+            <p>© 2026 subX — جميع الحقوق محفوظة للمطور. تم التطوير بأعلى معايير الإبداع.</p>
+            <p style="color: var(--accent-cyan); font-weight: 600;">للتواصل المباشر والدعم الفني: maa321584@gmail.com</p>
+        </div>
     </footer>
 
-    <!-- Custom JS -->
+    <!-- Legendary JS Engine -->
     <script src="js/app.js"></script>
 </body>
 </html>
